@@ -194,18 +194,18 @@ conn.handler = async function (m) {
 
 conn.on('message-new', conn.handler) 
 conn.on('error', conn.logger.error)
-global.mods = ['6281357302007@s.whatsapp.net']
-global.prems = ['62888235435804@s.whatsapp.net']
+global.mods = ['917356145338@s.whatsapp.net']
+global.prems = ['917356145338@s.whatsapp.net']
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    owner: 'Perintah ini hanya dapat digunakan oleh Owner BOT !',
-    mods: 'Perintah ini hanya dapat digunakan oleh Moderator BOT !',
-    premium: 'Perintah ini hanya untuk member Premium!',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-    admin: 'Perintah ini hanya untuk admin grup!',
-    botAdmin: 'Jadikan bot sebagai admin untuk menggunakan perintah ini!'
+    owner : 'This command can only be used by the BOT Owner!' ,
+    mods : 'This command can only be used by BOT Moderators!' ,
+    premium : 'This command is only for Premium members!' ,
+    group : 'This command can only be used in groups!' ,
+    private : 'This command can only be used in Private Chats!' ,
+    admin : 'This command is for group admins only!' ,
+    botAdmin : 'Make the bot an admin to use this command!'
   }[type]
   msg && conn.reply(m.chat, msg, m)
 }
